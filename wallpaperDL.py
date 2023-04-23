@@ -23,7 +23,7 @@ def download_wallpaper(url):
     open(dl_path,'wb').write(res.content)
 
 # Search Query
-query = "winter"
+query = input("Enter search criteria: ")
 wall_dl_url = wallpaper_search_api(query)
 
 # Download Wallpapers Based on Search Query
