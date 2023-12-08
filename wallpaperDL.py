@@ -19,7 +19,7 @@ def download_wallpaper(url):
     res = requests.get(url)
     wall_name = generate_id()
     ext = os.path.splitext(url)[1]
-    dl_path = f"/home/{user}/wallpapers/{wall_name}{ext}"
+    dl_path = f"/home/{user}/Downloads/{wall_name}{ext}"
     open(dl_path,'wb').write(res.content)
 
 # Search Query
