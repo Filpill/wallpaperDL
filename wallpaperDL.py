@@ -16,10 +16,11 @@ def generate_id():
 def download_wallpaper(url):
     print(f"Downloading...{url}")
     user="filpill"
+    temp_wallpapers = 'desktop_setup/wallpaperDL/temp_screens'
     res = requests.get(url)
     wall_name = generate_id()
     ext = os.path.splitext(url)[1]
-    dl_path = f"/home/{user}/Downloads/{wall_name}{ext}"
+    dl_path = fr"/home/{user}/{temp_wallpapers}/{wall_name}{ext}"
     open(dl_path,'wb').write(res.content)
 
 # Search Query
